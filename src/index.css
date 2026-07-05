@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply select-none overflow-x-hidden;
+  }
+}
+
+/* Custom premium styling classes */
+.glass-panel {
+  @apply bg-white/70 dark:bg-slate-900/75 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80;
+}
+
+.glass-card {
+  @apply bg-white/65 dark:bg-slate-900/60 backdrop-blur border border-slate-200/60 dark:border-slate-800/60 hover:border-brand-500/50 dark:hover:border-brand-500/50 transition-all duration-200;
+}
+
+.sidebar-glass {
+  @apply bg-slate-900/95 dark:bg-slate-950/95 backdrop-blur border-r border-slate-800/60;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700 transition-colors;
+}
+
+/* Premium Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+.pulse-glow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
